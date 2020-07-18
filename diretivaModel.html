@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diretiva Model</title>
+</head>
+
+    
+<body>
+    <div id="app">      
+        <input type="text" v-model="textoDigitado"/>        <!--diretiva model,mostrar valor digitado que se pede-->
+        <br/>
+        <div v-if="textoDigitado == 1">
+            <img :src='img' :title='tituloimg' width="100px"/>
+        </div>
+        <div v-else-if="textoDigitado == 2">
+            <img :src='img1' :title='tituloimg' width="100px"/>
+        </div>
+        <div v-else-if="textoDigitado == 3">
+            <img :src='img2' :title='tituloimg' width="100px"/>
+        </div>
+        
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> <!--Primeiro carrega comando, após faz script-->
+
+    <script>
+        new Vue ({          
+            
+            el: '#app',    
+            data:{              
+                textoDigitado: "",
+                img: 'bruno1.png',
+                img1: 'bruno2.png',
+                img2: 'bruno3.png',
+                tituloimg: 'Bruno AGUIAR',
+            }
+            
+        })
+
+
+    </script>
+
+    
+</body>
+</html>
